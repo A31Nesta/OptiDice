@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://buaiqsd1s5hj3"]
+
+[ext_resource type="Script" path="res://scn/DiceForceApplierBasic.gd" id="1_1s3l8"]
+[ext_resource type="Texture2D" uid="uid://baubqldpwv7y7" path="res://Dice/D6/D6-L-Rad.png" id="2_iwtt7"]
+[ext_resource type="ArrayMesh" uid="uid://dqu8fdtf224hi" path="res://Dice/D6/D6.obj" id="3_rw4jk"]
+[ext_resource type="Material" uid="uid://djt75ywjw4ipc" path="res://Dice/nums.tres" id="4_4ga0b"]
+[ext_resource type="ArrayMesh" uid="uid://nspu1o2jhthk" path="res://Dice/D6/D6n.obj" id="5_fwlxs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rb0y8"]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("2_iwtt7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qkwm8"]
+size = Vector3(2, 2, 2)
+
+[node name="D6-RB" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+gravity_scale = 3.0
+continuous_cd = true
+script = ExtResource("1_1s3l8")
+
+[node name="D6" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_rb0y8")
+mesh = ExtResource("3_rw4jk")
+
+[node name="D6n" type="MeshInstance3D" parent="D6"]
+material_override = ExtResource("4_4ga0b")
+mesh = ExtResource("5_fwlxs")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qkwm8")

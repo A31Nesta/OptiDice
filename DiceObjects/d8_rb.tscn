@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://cgjlbh1luxfde"]
+
+[ext_resource type="Script" path="res://scn/DiceForceApplierBasic.gd" id="1_1s3l8"]
+[ext_resource type="Texture2D" uid="uid://cq0v5iodkmw1c" path="res://Dice/D8/D8-L-Rad.png" id="2_ba60d"]
+[ext_resource type="ArrayMesh" uid="uid://b6gco31ayya2n" path="res://Dice/D8/D8.obj" id="3_08mh2"]
+[ext_resource type="Material" uid="uid://djt75ywjw4ipc" path="res://Dice/nums.tres" id="4_tyvbf"]
+[ext_resource type="ArrayMesh" uid="uid://ddruohtjvy2a1" path="res://Dice/D8/D8n.obj" id="5_5y5ju"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u4iq6"]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("2_ba60d")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ea3jk"]
+points = PackedVector3Array(0, 1.5, 0, 1.5, 0, 0, 0, 0, -1.5, -1.5, 0, 0, 0, 0, 1.5, 0, -1.5, 0)
+
+[node name="D8-RB" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+gravity_scale = 3.0
+continuous_cd = true
+script = ExtResource("1_1s3l8")
+
+[node name="D8" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_u4iq6")
+mesh = ExtResource("3_08mh2")
+
+[node name="D8n" type="MeshInstance3D" parent="D8"]
+material_override = ExtResource("4_tyvbf")
+mesh = ExtResource("5_5y5ju")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ea3jk")

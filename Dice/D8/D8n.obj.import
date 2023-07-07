@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddruohtjvy2a1"
+path="res://.godot/imported/D8n.obj-500922c7e19c4b1da4563223295b22fa.mesh"
+
+[deps]
+
+files=["res://.godot/imported/D8n.obj-500922c7e19c4b1da4563223295b22fa.mesh"]
+
+source_file="res://Dice/D8/D8n.obj"
+dest_files=["res://.godot/imported/D8n.obj-500922c7e19c4b1da4563223295b22fa.mesh", "res://.godot/imported/D8n.obj-500922c7e19c4b1da4563223295b22fa.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

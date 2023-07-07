@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://k47trxjibpxk"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_bv852"]
+
+[sub_resource type="Sky" id="Sky_ysymv"]
+sky_material = SubResource("ProceduralSkyMaterial_bv852")
+radiance_size = 2
+
+[sub_resource type="Environment" id="Environment_45sor"]
+background_mode = 2
+sky = SubResource("Sky_ysymv")
+ambient_light_source = 2
+ambient_light_color = Color(0.203922, 0.203922, 0.203922, 1)
+ambient_light_sky_contribution = 0.0
+
+[node name="Camera3D" type="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.961926)
+environment = SubResource("Environment_45sor")
+current = true

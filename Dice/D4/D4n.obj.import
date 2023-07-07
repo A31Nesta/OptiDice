@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dl2pxya735r36"
+path="res://.godot/imported/D4n.obj-b90ee1b317b6ce4eb71cb05def1735c7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/D4n.obj-b90ee1b317b6ce4eb71cb05def1735c7.mesh"]
+
+source_file="res://Dice/D4/D4n.obj"
+dest_files=["res://.godot/imported/D4n.obj-b90ee1b317b6ce4eb71cb05def1735c7.mesh", "res://.godot/imported/D4n.obj-b90ee1b317b6ce4eb71cb05def1735c7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

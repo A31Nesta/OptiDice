@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://baiqk7xgo1yb4"]
+
+[ext_resource type="Script" path="res://scn/DiceForceApplierBasic.gd" id="1_1s3l8"]
+[ext_resource type="ArrayMesh" uid="uid://dtn2yl1vjy45k" path="res://Dice/D10/D10.obj" id="2_fy5g6"]
+[ext_resource type="Texture2D" uid="uid://8c4tpm8sosxm" path="res://Dice/D10/D10-L-Rad.png" id="3_77q5x"]
+[ext_resource type="Material" uid="uid://djt75ywjw4ipc" path="res://Dice/nums.tres" id="4_1dvv0"]
+[ext_resource type="ArrayMesh" uid="uid://cl86ar28lq6dc" path="res://Dice/D10/D10n.obj" id="5_ivy34"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gmiwy"]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("3_77q5x")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_hbt3i"]
+points = PackedVector3Array(-0.0219502, -0.125049, 1.24981, -1.26362e-05, -1.25, -9.50098e-05, 0.734665, 0.124804, 1.01123, -1.26362e-05, 1.25, -9.50098e-05, -0.734924, 0.124804, 1.01123, -0.717187, -0.125049, -1.02415, -1.26362e-05, 0.124804, -1.25, 0.752169, -0.125049, -0.998453, 1.18859, 0.124804, -0.386469, 1.18182, -0.125049, 0.406834, -1.19538, -0.125049, 0.365235, -1.18885, 0.124804, -0.386469)
+
+[node name="D10-RB" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+gravity_scale = 3.0
+continuous_cd = true
+script = ExtResource("1_1s3l8")
+
+[node name="D10" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_fy5g6")
+surface_material_override/0 = SubResource("StandardMaterial3D_gmiwy")
+
+[node name="D10n" type="MeshInstance3D" parent="D10"]
+material_override = ExtResource("4_1dvv0")
+mesh = ExtResource("5_ivy34")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_hbt3i")
