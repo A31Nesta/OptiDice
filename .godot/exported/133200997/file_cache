@@ -1,0 +1,13 @@
+res://scn/node_3d.tscn::0395ee5baf94f490ebde5698c77f3862::1688729335::res://.godot/exported/133200997/export-eb61b8fad8191b6408a395f111b33d24-node_3d.scn
+res://scn/Dice.tscn::b4be2e1ca2c82970d71d0254d6874366::1688750738::res://.godot/exported/133200997/export-4688de3073ee415a2b7fc1f4376e93e7-Dice.scn
+res://Dice/Board/boardCol.tres::d5c1cdfc78c3df3a1c52872e84d3bd3c::1688662233::res://.godot/exported/133200997/export-bd8a3f2a2f99af7ab89111bc9e3a4931-boardCol.res
+res://camera_3d.tscn::df80ea5b6810038ab3812e20ab6ec10e::1688750738::res://.godot/exported/133200997/export-8e4cabbc6d05f482bc4173e4e4d55eb6-camera_3d.scn
+res://Dice/nums.tres::67e289aa7e104b8bb6e1efaaebc0ec84::1688744820::res://.godot/exported/133200997/export-40d226072901efaed6ddc9fd42e017b3-nums.res
+res://DiceObjects/d4_rb.tscn::c9bed3bc83c62f62b23546c982e77a39::1688733042::res://.godot/exported/133200997/export-adce16aad53236317f5baaaa93ed79f2-d4_rb.scn
+res://DiceObjects/d6_rb.tscn::4b2fc21690eddded1505721846ea7aa6::1688733042::res://.godot/exported/133200997/export-72c4b06f4d2e416d883e989b167d27af-d6_rb.scn
+res://DiceObjects/d8_rb.tscn::74ebccfafb599ca361e69459d94fb4ca::1688733042::res://.godot/exported/133200997/export-76d615a7f1c11611165d60a55700c63f-d8_rb.scn
+res://DiceObjects/d10_rb.tscn::eadee66789d2610f6c5b4bcd9edb5236::1688733042::res://.godot/exported/133200997/export-dce624c7477ffc6260d8859046f53ec8-d10_rb.scn
+res://DiceObjects/d100_rb.tscn::e81678bce72e30bcae566e41688be1c0::1688733042::res://.godot/exported/133200997/export-fd2a4b2f781df40cc6b666cfa5208e4b-d100_rb.scn
+res://DiceObjects/d12_rb.tscn::ce8ade2852407bf3a102b889bf307b27::1688745367::res://.godot/exported/133200997/export-8642576a0f3075d9a258aedbee04ac7c-d12_rb.scn
+res://DiceObjects/d20_rb.tscn::a2b52e83ecfb225bd736aa1b163de5c6::1688733042::res://.godot/exported/133200997/export-e9279fd01a12b894b9d5c2c7af561f60-d20_rb.scn
+res://scn/menu.tscn::602cce2c5f323db3fcef956114e752d9::1688750739::res://.godot/exported/133200997/export-765967cae32ef2873f8599b9376cdd4c-menu.scn

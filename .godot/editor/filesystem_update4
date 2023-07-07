@@ -1,0 +1,9 @@
+res://scn/menu.tscn
+res://Dice/nums.tres
+res://scn/RollButton.gd
+res://camera_3d.tscn
+res://scn/Dice.tscn
+res://scn/DiceForceApplierBasic.gd
+res://DiceObjects/d12_rb.tscn
+res://scn/OpenMenu.gd
+res://scn/addDiceButtons.gd
