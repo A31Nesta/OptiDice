@@ -15,6 +15,11 @@ run/main_scene="res://scn/Dice2.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=396
+window/size/viewport_height=396
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

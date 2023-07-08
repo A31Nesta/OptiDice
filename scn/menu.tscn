@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://y1dlnhrh0llq"]
+[gd_scene load_steps=21 format=3 uid="uid://y1dlnhrh0llq"]
 
 [ext_resource type="Texture2D" uid="uid://dpyhmjv0ki1xu" path="res://UI/roll.png" id="1_jbbc7"]
 [ext_resource type="Script" path="res://scn/MenuController.gd" id="1_jysw1"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bqfglj873uk11" path="res://UI/d6.png" id="5_fvd62"]
 [ext_resource type="Texture2D" uid="uid://bmoqxeywc8bkf" path="res://UI/d6i.png" id="6_iulh1"]
 [ext_resource type="Script" path="res://scn/addDiceButtons.gd" id="6_jdjug"]
+[ext_resource type="Script" path="res://scn/Indicator.gd" id="7_k630i"]
 [ext_resource type="Texture2D" uid="uid://bp058iq8bhxkn" path="res://UI/d8.png" id="7_tlwpm"]
 [ext_resource type="Texture2D" uid="uid://kiodmn1wreai" path="res://UI/d8i.png" id="8_m5d4p"]
 [ext_resource type="Texture2D" uid="uid://b5i2f8yx65bht" path="res://UI/d10.png" id="9_1l3ny"]
@@ -18,6 +19,12 @@
 [ext_resource type="Texture2D" uid="uid://ciivl6dpumwp0" path="res://UI/d20i.png" id="14_ri1wf"]
 [ext_resource type="Texture2D" uid="uid://v8kgbo2vuvld" path="res://UI/d100.png" id="15_xg7s5"]
 [ext_resource type="Texture2D" uid="uid://biml8v53ert0n" path="res://UI/d100i.png" id="16_i5jut"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3sfgl"]
+font_size = 30
+shadow_size = 10
+shadow_color = Color(0, 0, 0, 0.501961)
+shadow_offset = Vector2(0, 0)
 
 [node name="Control" type="ColorRect"]
 anchors_preset = 15
@@ -70,6 +77,19 @@ texture_pressed = ExtResource("3_dyjx7")
 texture_disabled = ExtResource("3_dyjx7")
 script = ExtResource("6_jdjug")
 
+[node name="Indicator" type="Label" parent="D4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
+
 [node name="D6" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -88,6 +108,19 @@ texture_normal = ExtResource("5_fvd62")
 texture_pressed = ExtResource("6_iulh1")
 texture_disabled = ExtResource("6_iulh1")
 script = ExtResource("6_jdjug")
+
+[node name="Indicator" type="Label" parent="D6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
 
 [node name="D8" type="TextureButton" parent="."]
 layout_mode = 1
@@ -108,6 +141,19 @@ texture_pressed = ExtResource("8_m5d4p")
 texture_disabled = ExtResource("8_m5d4p")
 script = ExtResource("6_jdjug")
 
+[node name="Indicator" type="Label" parent="D8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
+
 [node name="D10" type="TextureButton" parent="."]
 layout_mode = 2
 anchor_left = 0.5
@@ -123,6 +169,19 @@ texture_normal = ExtResource("9_1l3ny")
 texture_pressed = ExtResource("10_rhd5p")
 texture_disabled = ExtResource("10_rhd5p")
 script = ExtResource("6_jdjug")
+
+[node name="Indicator" type="Label" parent="D10"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
 
 [node name="D12" type="TextureButton" parent="."]
 layout_mode = 2
@@ -140,6 +199,19 @@ texture_pressed = ExtResource("12_rdxdw")
 texture_disabled = ExtResource("12_rdxdw")
 script = ExtResource("6_jdjug")
 
+[node name="Indicator" type="Label" parent="D12"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
+
 [node name="D20" type="TextureButton" parent="."]
 layout_mode = 2
 anchor_left = 0.5
@@ -155,6 +227,19 @@ texture_normal = ExtResource("13_aojxb")
 texture_pressed = ExtResource("14_ri1wf")
 texture_disabled = ExtResource("14_ri1wf")
 script = ExtResource("6_jdjug")
+
+[node name="Indicator" type="Label" parent="D20"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
 
 [node name="D100" type="TextureButton" parent="."]
 layout_mode = 2
@@ -172,4 +257,31 @@ texture_pressed = ExtResource("16_i5jut")
 texture_disabled = ExtResource("16_i5jut")
 script = ExtResource("6_jdjug")
 
+[node name="Indicator" type="Label" parent="D100"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+label_settings = SubResource("LabelSettings_3sfgl")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("7_k630i")
+
+[connection signal="hidden" from="." to="D4/Indicator" method="on_disable_called"]
+[connection signal="hidden" from="." to="D6/Indicator" method="on_disable_called"]
+[connection signal="hidden" from="." to="D8/Indicator" method="on_disable_called"]
+[connection signal="hidden" from="." to="D10/Indicator" method="on_disable_called"]
+[connection signal="hidden" from="." to="D12/Indicator" method="on_disable_called"]
+[connection signal="hidden" from="." to="D20/Indicator" method="on_disable_called"]
+[connection signal="hidden" from="." to="D100/Indicator" method="on_disable_called"]
 [connection signal="pressed" from="CenterContainer/Button" to="." method="_on_roll_button_pressed"]
+[connection signal="pressed" from="D4" to="D4/Indicator" method="_on_d_pressed"]
+[connection signal="pressed" from="D6" to="D6/Indicator" method="_on_d_pressed"]
+[connection signal="pressed" from="D8" to="D8/Indicator" method="_on_d_pressed"]
+[connection signal="pressed" from="D10" to="D10/Indicator" method="_on_d_pressed"]
+[connection signal="pressed" from="D12" to="D12/Indicator" method="_on_d_pressed"]
+[connection signal="pressed" from="D20" to="D20/Indicator" method="_on_d_pressed"]
+[connection signal="pressed" from="D100" to="D100/Indicator" method="_on_d_pressed"]

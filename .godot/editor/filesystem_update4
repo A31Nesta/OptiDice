@@ -17,3 +17,4 @@ res://scn/MenuController.gd
 res://Dice/Materials/Rad.tres
 res://Dice/Materials/Mag.tres
 res://Dice/Materials/Col.tres
+res://scn/Indicator.gd
