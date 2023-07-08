@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dei2q0wp7uie4"]
+
+[ext_resource type="Texture2D" uid="uid://byyajus4htpu1" path="res://Dice/Materials/Mag.png" id="1_h8rdt"]
+
+[resource]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("1_h8rdt")

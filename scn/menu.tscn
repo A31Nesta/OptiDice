@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://y1dlnhrh0llq"]
 
 [ext_resource type="Texture2D" uid="uid://dpyhmjv0ki1xu" path="res://UI/roll.png" id="1_jbbc7"]
-[ext_resource type="Script" path="res://scn/RollButton.gd" id="2_nck1b"]
+[ext_resource type="Script" path="res://scn/MenuController.gd" id="1_jysw1"]
 [ext_resource type="Texture2D" uid="uid://c6dr0l77j4syl" path="res://UI/rolli.png" id="2_tvcml"]
 [ext_resource type="Texture2D" uid="uid://j0k5pilykqt4" path="res://UI/d4.png" id="2_w5les"]
 [ext_resource type="Texture2D" uid="uid://chm0ks6t1e0sp" path="res://UI/d4i.png" id="3_dyjx7"]
@@ -31,6 +31,7 @@ auto_translate = false
 localize_numeral_system = false
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+script = ExtResource("1_jysw1")
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 layout_mode = 1
@@ -49,7 +50,6 @@ texture_normal = ExtResource("1_jbbc7")
 texture_pressed = ExtResource("2_tvcml")
 texture_disabled = ExtResource("2_tvcml")
 stretch_mode = 5
-script = ExtResource("2_nck1b")
 
 [node name="D4" type="TextureButton" parent="."]
 layout_mode = 1
@@ -171,3 +171,5 @@ texture_normal = ExtResource("15_xg7s5")
 texture_pressed = ExtResource("16_i5jut")
 texture_disabled = ExtResource("16_i5jut")
 script = ExtResource("6_jdjug")
+
+[connection signal="pressed" from="CenterContainer/Button" to="." method="_on_roll_button_pressed"]

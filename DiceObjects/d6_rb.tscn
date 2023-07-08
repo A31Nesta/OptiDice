@@ -21,11 +21,11 @@ gravity_scale = 3.0
 continuous_cd = true
 script = ExtResource("1_1s3l8")
 
-[node name="D6" type="MeshInstance3D" parent="."]
+[node name="Mdl" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_rb0y8")
 mesh = ExtResource("3_rw4jk")
 
-[node name="D6n" type="MeshInstance3D" parent="D6"]
+[node name="D6n" type="MeshInstance3D" parent="Mdl"]
 material_override = ExtResource("4_4ga0b")
 mesh = ExtResource("5_fwlxs")
 skeleton = NodePath("../..")

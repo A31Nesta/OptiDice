@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b0tlavgdb42kj"]
+
+[ext_resource type="Texture2D" uid="uid://dwds7lwen36dy" path="res://Dice/Materials/Rad.png" id="1_6fsh3"]
+
+[resource]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("1_6fsh3")
