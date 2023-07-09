@@ -1,9 +1,9 @@
 Label
+CenterContainer
 DirectionalLight3D
 RigidBody3D
 TextureButton
 Button
-CenterContainer
 ColorRect
 CollisionShape3D
 CollisionPolygon3D

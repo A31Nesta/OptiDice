@@ -1,5 +1,8 @@
 extends RigidBody3D
 
+@export var normals = []
+@export var values = []
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -24,3 +27,38 @@ func _process(delta):
 		
 		apply_force(forceToApply)
 		apply_torque(torqueToApply)
+
+func isStationary():
+	var velThreshold = 0.5
+	var angVelThreshold = 0.4
+	
+	# We just check if the die is not moving or rotating too much
+	if linear_velocity.length() < velThreshold && angular_velocity.length() < angVelThreshold:
+		return true
+	
+	return false
+
+func getDieValue():
+	if not isStationary():
+		return -1
+	
+	# ---< INSTANT DEATH >--- #
+	
+	const vector = Vector3(0, 1, 0);
+	
+	var closestIndex
+	var closestAngle = 360
+	
+	var rAng = quaternion.get_angle()
+	var rAxis = quaternion.get_axis().normalized()
+	# rAxis = Vector3(rAxis.y, rAxis.x, rAxis.z)
+	# print("rAxis: ", rAxis)
+	
+	for i in range(normals.size()):
+		var angle = normals[i].normalized().rotated(rAxis, rAng).angle_to(vector)
+		# print("Ang", normals[i].rotated(rAxis, rAng))
+		if angle < closestAngle:
+			closestAngle = angle
+			closestIndex = i
+	
+	return values[closestIndex]

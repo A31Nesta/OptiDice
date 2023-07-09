@@ -64,14 +64,32 @@ func enable():
 
 # The callback for the Roll Button
 func _on_roll_button_pressed():
+	# We get how many dice we need, this way we can well Dice Manager
+	# how many dice we need to instanciate and where
+	var d4c = buttons[0].counter
+	var d6c = buttons[1].counter
+	var d8c = buttons[2].counter
+	var d10c = buttons[3].counter
+	var d12c = buttons[4].counter
+	var d20c = buttons[5].counter
+	var d100c = buttons[6].counter
+	# We need to know the total so we can specify the size of the dice
+	var total = d4c + d6c + d8c + d10c + d12c + d20c + d100c
+	var size : float
+	if total <= 7:
+		size = 1.0
+	else:
+		size = (5.0/total)+0.25
+	print("SIZE: " + str(size))
+	
 	# We add the dice to the main scene
-	diceScene.addDice(diceScene.d4, buttons[0].counter)
-	diceScene.addDice(diceScene.d6, buttons[1].counter)
-	diceScene.addDice(diceScene.d8, buttons[2].counter)
-	diceScene.addDice(diceScene.d10, buttons[3].counter)
-	diceScene.addDice(diceScene.d12, buttons[4].counter)
-	diceScene.addDice(diceScene.d20, buttons[5].counter)
-	diceScene.addDice(diceScene.d100, buttons[6].counter)
+	diceScene.addDice(diceScene.d4, d4c, size)
+	diceScene.addDice(diceScene.d6, d6c, size)
+	diceScene.addDice(diceScene.d8, d8c, size)
+	diceScene.addDice(diceScene.d10, d10c, size)
+	diceScene.addDice(diceScene.d12, d12c, size)
+	diceScene.addDice(diceScene.d20, d20c, size)
+	diceScene.addDice(diceScene.d100, d100c, size)
 	
 	# We tell the main scene that the menu is already closed
 	diceScene.menuOpen = false

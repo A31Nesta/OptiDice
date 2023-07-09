@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://bts7dufpws2fa"]
 
-[ext_resource type="Script" path="res://scn/DiceForceApplierBasic.gd" id="1_1s3l8"]
+[ext_resource type="Script" path="res://scn/DieController.gd" id="1_tkmt3"]
 [ext_resource type="ArrayMesh" uid="uid://dtn2yl1vjy45k" path="res://Dice/D10/D10.obj" id="2_mh11r"]
 [ext_resource type="Texture2D" uid="uid://8c4tpm8sosxm" path="res://Dice/D10/D10-L-Rad.png" id="3_e2fsb"]
 [ext_resource type="Material" uid="uid://djt75ywjw4ipc" path="res://Dice/nums.tres" id="4_eqyus"]
@@ -17,9 +17,11 @@ points = PackedVector3Array(-0.0219502, -0.125049, 1.24981, -1.26362e-05, -1.25,
 
 [node name="D100-RB" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-gravity_scale = 3.0
+gravity_scale = 4.0
 continuous_cd = true
-script = ExtResource("1_1s3l8")
+script = ExtResource("1_tkmt3")
+normals = [Vector3(0.485, 0.344, -0.659), Vector3(0.474, -0.344, 0.659), Vector3(-0.78, 0.344, 0.248), Vector3(0.009, -0.344, -0.818), Vector3(-0.005, 0.344, 0.818), Vector3(0.781, -0.344, -0.244), Vector3(-0.476, 0.344, -0.665), Vector3(-0.488, -0.344, 0.657), Vector3(0.776, 0.344, 0.258), Vector3(-0.775, -0.344, -0.261)]
+values = [10, 20, 30, 40, 50, 60, 70, 80, 90, 0]
 
 [node name="Mdl" type="MeshInstance3D" parent="."]
 material_override = SubResource("StandardMaterial3D_yaa3c")
