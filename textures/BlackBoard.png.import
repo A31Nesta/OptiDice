@@ -2,9 +2,9 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s5w13ts5dqqt"
-path.s3tc="res://.godot/imported/Wood.png-0b50f390ada4f256b5d5463a0e18a962.s3tc.ctex"
-path.etc2="res://.godot/imported/Wood.png-0b50f390ada4f256b5d5463a0e18a962.etc2.ctex"
+uid="uid://cu0h3lswnsym2"
+path.s3tc="res://.godot/imported/BlackBoard.png-202f3d7e288dac5ec35ff343e6c8be5e.s3tc.ctex"
+path.etc2="res://.godot/imported/BlackBoard.png-202f3d7e288dac5ec35ff343e6c8be5e.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Dice/board/Wood.png"
-dest_files=["res://.godot/imported/Wood.png-0b50f390ada4f256b5d5463a0e18a962.s3tc.ctex", "res://.godot/imported/Wood.png-0b50f390ada4f256b5d5463a0e18a962.etc2.ctex"]
+source_file="res://textures/BlackBoard.png"
+dest_files=["res://.godot/imported/BlackBoard.png-202f3d7e288dac5ec35ff343e6c8be5e.s3tc.ctex", "res://.godot/imported/BlackBoard.png-202f3d7e288dac5ec35ff343e6c8be5e.etc2.ctex"]
 
 [params]
 

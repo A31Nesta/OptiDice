@@ -11,11 +11,14 @@ const d10 : PackedScene = preload("res://DiceObjects/d10_rb.tscn")
 const d12 : PackedScene = preload("res://DiceObjects/d12_rb.tscn")
 const d20 : PackedScene = preload("res://DiceObjects/d20_rb.tscn")
 const d100 : PackedScene = preload("res://DiceObjects/d100_rb.tscn")
+const coin : PackedScene = preload("res://DiceObjects/coin.tscn")
 var diceOnScreen = []
 var diceMaterials = []
 # Where do we spawn the dice?
 var currentDiceHeight = 1
 const maxSpawnHeight = 27
+
+var floor : MeshInstance3D
 
 
 # Scene State:
@@ -36,6 +39,27 @@ var timer : float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	if !ProjectSettings.has_setting("boardTexture"):
+		print("created default for boardTexture")
+		ProjectSettings.set_setting("boardTexture", "res://textures/Wood.png")
+	
+	var cfgfile := ConfigFile.new()
+	var err = cfgfile.load("user://config.cfg")
+
+	floor = $Board
+
+	if err == OK:
+		var c = cfgfile.get_value("texture", "board", "none")
+		
+		if c == "none":
+			cfgfile.set_value("texture", "board", "res://textures/Wood.png")
+			cfgfile.save("user://config.cfg")
+		
+		loadMaterials()
+	else:
+		print("File didn't load :(")
+		reloadMaterials()
+	
 	# We add the possible materials to the array
 	diceMaterials.push_back(preload("res://Dice/Materials/Rad.tres"))
 	diceMaterials.push_back(preload("res://Dice/Materials/Mag.tres"))
@@ -158,6 +182,7 @@ func showMenu():
 	for i in range(diceOnScreen.size()):
 		diceOnScreen[i].queue_free()
 	diceOnScreen.clear()
+	dieChecking = 0
 	
 	# Show Menu
 	menuOpen = true
@@ -172,7 +197,8 @@ func addDice(die : PackedScene, count : int, size : float = 1):
 	for i in range(count):
 		var d = die.instantiate()
 		# We randomly select the material and also scale the dice and collision shape
-		d.get_child(0).material_override = diceMaterials[randi() % diceMaterials.size()]
+		if die != coin:
+			d.get_child(0).material_override = diceMaterials[randi() % diceMaterials.size()]
 		d.get_child(0).transform = d.get_child(0).transform.scaled(Vector3(size, size, size))
 		d.get_child(1).transform = d.get_child(1).transform.scaled(Vector3(size, size, size))
 		# d.gravity_scale = 4 * size
@@ -183,3 +209,20 @@ func addDice(die : PackedScene, count : int, size : float = 1):
 		# Update current dice height, we use size*2 because each die has a size of
 		# aproximately 2x2x2
 		currentDiceHeight = currentDiceHeight + size*2
+
+func reloadMaterials():
+		floor.material_override.albedo_texture = load(ProjectSettings.get_setting("boardTexture"))
+
+func loadMaterials():
+	var config = ConfigFile.new()
+
+	# Load data from a file.
+	var err = config.load("user://config.cfg")
+
+	# If the file didn't load, ignore it.
+	if err != OK:
+		print("File didn't load :(")
+		reloadMaterials()
+		return
+	
+	floor.material_override.albedo_texture = load(config.get_value("texture", "board", "res://textures/Wood.png"))

@@ -1,7 +1,11 @@
-/run/media/a31nesta/Seagate/Godot/builds
+res://textures
+/home/a31nesta/Documents/dev/optidiceBuild
+/home/a31nesta/Documents/dev
+/opt/android-sdk
+/opt/android-sdk/platforms/android-30
+res://textures/
 res://Dice/Materials/
 res://Dice/
 res://scn
-/run/media/a31nesta/Seagate/Godot/key
 res://
 /home/a31nesta/.android

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://c24wlwrq0dsdl"]
+
+[ext_resource type="Script" path="res://scn/DieController.gd" id="1_35evc"]
+[ext_resource type="Material" uid="uid://idlowosrwaq1" path="res://Dice/Materials/Coin.tres" id="2_ij3ir"]
+[ext_resource type="ArrayMesh" uid="uid://bcwjylnvoqfwp" path="res://Dice/coin/coin.obj" id="3_7s6l3"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_c8dbf"]
+points = PackedVector3Array(0, -0.05, -1, -0.5, -0.05, -0.866092, 0, 0.05, -1, 0.5, -0.05, -0.866092, -0.5, 0.05, -0.866092, -0.866092, -0.05, -0.5, 0.5, 0.05, -0.866092, 0.865897, -0.05, -0.5, -0.866092, 0.05, -0.5, -1, -0.05, 0, 0.865897, 0.05, -0.5, 1, -0.05, 0, -1, 0.05, 0, -0.866092, -0.05, 0.5, 1, 0.05, 0, 0.865897, -0.05, 0.5, -0.866092, 0.05, 0.5, -0.5, -0.05, 0.865897, 0.865897, 0.05, 0.5, 0.5, -0.05, 0.865897, -0.5, 0.05, 0.865897, 0, -0.05, 1, 0.5, 0.05, 0.865897, 0, 0.05, 1)
+
+[node name="C-RB" type="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mass = 0.5
+gravity_scale = 4.0
+continuous_cd = true
+script = ExtResource("1_35evc")
+
+[node name="Mdl" type="MeshInstance3D" parent="."]
+material_override = ExtResource("2_ij3ir")
+mesh = ExtResource("3_7s6l3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_c8dbf")

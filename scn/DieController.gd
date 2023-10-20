@@ -42,6 +42,9 @@ func getDieValue():
 	if not isStationary():
 		return -1
 	
+	if values.size() == 0:
+		return -1
+	
 	# ---< INSTANT DEATH >--- #
 	
 	const vector = Vector3(0, 1, 0);
@@ -55,7 +58,7 @@ func getDieValue():
 	# print("rAxis: ", rAxis)
 	
 	for i in range(normals.size()):
-		var angle = normals[i].normalized().rotated(rAxis, rAng).angle_to(vector)
+		var angle = normals[i].rotated(rAxis, rAng).normalized().angle_to(vector)
 		# print("Ang", normals[i].rotated(rAxis, rAng))
 		if angle < closestAngle:
 			closestAngle = angle
