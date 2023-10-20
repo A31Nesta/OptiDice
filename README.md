@@ -1,7 +1,8 @@
 # OptiDice
-3D Physics based Dice app for WearOS. Tested in WearOS 3.5
+3D Physics based Dice app for WearOS. Tested in WearOS 3.5 and WearOS 4
 
 ![optidice1](https://github.com/A31Nesta/OptiDice/assets/92674974/6d18a32a-55c9-4013-8e79-e854b8e2ebf3)
+![optidiceCoin](https://github.com/A31Nesta/OptiDice/assets/92674974/b328bc8b-cdc1-4da8-8015-1d7efe627b00)
 
 
 # How to use the app
@@ -12,9 +13,10 @@ Tap the screen once to prevent the dice from moving when you move your wrist, th
 Pro Tip: Tapping can create a little acceleration that can be detected by the dice if they're already on the board, to prevent this you can tap the screen while the dice are in the air
 
 ## Add more dice!
-Double tapping the screen brings up a menu to add more dice. You can add from D4s to D100s, when you're done just press the ROLL! button.
+Double tapping the screen brings up a menu to add more dice. You can add from D4s to D100s, when you're done just press the ROLL! button.  
+You can also add coins!
 
-![optidice2](https://github.com/A31Nesta/OptiDice/assets/92674974/c7d6cfda-705f-4918-9949-ab1d6b2ad802)
+![optidice2](https://github.com/A31Nesta/OptiDice/assets/92674974/abf6d350-b563-4222-8452-b2c35c24210e)
 
 
 ---
@@ -22,8 +24,9 @@ Double tapping the screen brings up a menu to add more dice. You can add from D4
 The dice have 3 different materials (for now) that are selected randomly when you generate the dice.
 
 # Roadmap
-- Make the dice really small when using a lot
-- To make the small dice readable, the Frozen Mode should could tell you the total sum of the dice so that you don't need to actually try to read the dice in such a small screen
+- Refactor the code
+- Make the config menu not ugly
+- Edit the export thing so that the app gets recognized as an actual WearOS app
 
 ---
 # What is that name?
