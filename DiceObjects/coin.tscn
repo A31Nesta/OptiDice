@@ -9,14 +9,15 @@ points = PackedVector3Array(0, -0.05, -1, -0.5, -0.05, -0.866092, 0, 0.05, -1, 0
 
 [node name="C-RB" type="RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
-mass = 0.5
 gravity_scale = 4.0
 continuous_cd = true
 script = ExtResource("1_35evc")
 
 [node name="Mdl" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 material_override = ExtResource("2_ij3ir")
 mesh = ExtResource("3_7s6l3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_c8dbf")

@@ -23,6 +23,7 @@ window/size/viewport_height=450
 [physics]
 
 3d/run_on_separate_thread=true
+3d/default_gravity=19.6
 3d/solver/solver_iterations=32
 
 [rendering]

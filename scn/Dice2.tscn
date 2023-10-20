@@ -28,18 +28,18 @@ outline_color = Color(0, 0, 0, 0.501961)
 script = ExtResource("1_wjiea")
 
 [node name="Board" type="MeshInstance3D" parent="."]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.22568, 0)
 material_override = SubResource("StandardMaterial3D_rxduo")
 mesh = ExtResource("2_i38nt")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Board"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Board/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0124422, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.01, 0)
 shape = SubResource("BoxShape3D_wn6va")
 
 [node name="Col" type="MeshInstance3D" parent="."]
-transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, -0.22568, 0)
 visible = false
 mesh = ExtResource("3_x6w1a")
 skeleton = NodePath("../Camera3D")

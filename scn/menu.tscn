@@ -324,6 +324,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("7_k630i")
 
+[connection signal="hidden" from="." to="Coin/Indicator" method="on_disable_called"]
 [connection signal="hidden" from="." to="D4/Indicator" method="on_disable_called"]
 [connection signal="hidden" from="." to="D6/Indicator" method="on_disable_called"]
 [connection signal="hidden" from="." to="D8/Indicator" method="on_disable_called"]
@@ -331,7 +332,6 @@ script = ExtResource("7_k630i")
 [connection signal="hidden" from="." to="D12/Indicator" method="on_disable_called"]
 [connection signal="hidden" from="." to="D20/Indicator" method="on_disable_called"]
 [connection signal="hidden" from="." to="D100/Indicator" method="on_disable_called"]
-[connection signal="hidden" from="." to="Coin/Indicator" method="on_disable_called"]
 [connection signal="pressed" from="CenterContainer/Button" to="." method="_on_roll_button_pressed"]
 [connection signal="pressed" from="Options" to="." method="open_options"]
 [connection signal="pressed" from="Coin" to="Coin/Indicator" method="_on_d_pressed"]
