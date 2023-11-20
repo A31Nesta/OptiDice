@@ -1,6 +1,0 @@
-res://scn/Dice2.tscn
-res://Dice/nums.tres
-res://Dice/Materials/Coin.tres
-res://DiceObjects/coin.tscn
-res://DiceObjects/d100_rb.tscn
-res://scn/DieController.gd

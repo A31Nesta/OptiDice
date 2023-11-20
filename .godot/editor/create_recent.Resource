@@ -1,5 +1,0 @@
-Image
-ImageTexture
-CompressedTexture2D
-StandardMaterial3D
-ConcavePolygonShape3D
