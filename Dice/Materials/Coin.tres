@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://idlowosrwaq1"]
+
+[ext_resource type="Texture2D" uid="uid://c2o6shgiknj3x" path="res://Dice/coin/coinBothSides.png" id="1_j7lsq"]
+
+[resource]
+shading_mode = 2
+diffuse_mode = 1
+specular_mode = 2
+albedo_texture = ExtResource("1_j7lsq")

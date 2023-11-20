@@ -1,0 +1,77 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch63s2selpwte"]
+
+[ext_resource type="Script" path="res://scn/Settings.gd" id="1_rwid7"]
+[ext_resource type="Texture2D" uid="uid://bmoqxeywc8bkf" path="res://UI/d6i.png" id="2_ny73v"]
+[ext_resource type="Texture2D" uid="uid://bi46i8snkk7mm" path="res://textures/MenuButtons/Wood.png" id="3_xn6si"]
+[ext_resource type="Texture2D" uid="uid://cq74b4335ie0m" path="res://textures/MenuButtons/BlackBoard.png" id="4_60tjf"]
+
+[node name="Settings" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_rwid7")
+
+[node name="DebugCircle" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ny73v")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 10
+
+[node name="Label" type="Label" parent="VBoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Background Style"
+
+[node name="MarginContainer2" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 100
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/MarginContainer2"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="Wood" type="TextureButton" parent="VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("3_xn6si")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Black" type="TextureButton" parent="VBoxContainer/MarginContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+texture_normal = ExtResource("4_60tjf")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/HBoxContainer/Wood" to="." method="_on_wood_pressed"]
+[connection signal="pressed" from="VBoxContainer/MarginContainer2/HBoxContainer/Black" to="." method="_on_black_pressed"]

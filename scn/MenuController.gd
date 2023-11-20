@@ -22,6 +22,10 @@ func _ready():
 	buttons.push_back($"D12")
 	buttons.push_back($"D20")
 	buttons.push_back($"D100")
+	buttons.push_back($Options)
+	
+	# Extra :)
+	buttons.push_back($Coin)
 
 # We use a timer to enable all buttons after 0.5 seconds
 func _process(delta):
@@ -73,8 +77,11 @@ func _on_roll_button_pressed():
 	var d12c = buttons[4].counter
 	var d20c = buttons[5].counter
 	var d100c = buttons[6].counter
+	
+	var coin = buttons[8].counter # coin
+	
 	# We need to know the total so we can specify the size of the dice
-	var total = d4c + d6c + d8c + d10c + d12c + d20c + d100c
+	var total = d4c + d6c + d8c + d10c + d12c + d20c + d100c + coin
 	var size : float
 	if total <= 7:
 		size = 1.0
@@ -89,10 +96,16 @@ func _on_roll_button_pressed():
 	diceScene.addDice(diceScene.d10, d10c, size)
 	diceScene.addDice(diceScene.d12, d12c, size)
 	diceScene.addDice(diceScene.d20, d20c, size)
-	diceScene.addDice(diceScene.d100, d100c, size)
+	diceScene.addDice(diceScene.coin, coin, size)
 	
 	# We tell the main scene that the menu is already closed
 	diceScene.menuOpen = false
 	
 	# We disable this scene
 	disable()
+
+func open_options():
+	print("settings clickity clackity")
+	var settings := load("res://scn/Settings.tscn")
+	var instance = settings.instantiate()
+	add_child(instance)

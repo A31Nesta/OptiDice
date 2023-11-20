@@ -12,13 +12,19 @@ config_version=5
 
 config/name="OptiDice"
 run/main_scene="res://scn/Dice2.tscn"
-config/features=PackedStringArray("4.0", "GL Compatibility")
+config/features=PackedStringArray("4.1", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=396
-window/size/viewport_height=396
+window/size/viewport_width=450
+window/size/viewport_height=450
+
+[physics]
+
+3d/run_on_separate_thread=true
+3d/default_gravity=19.6
+3d/solver/solver_iterations=32
 
 [rendering]
 
