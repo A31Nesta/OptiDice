@@ -1,7 +1,7 @@
 # OptiDice
 3D Physics based Dice app for WearOS. Tested in WearOS 3.5 and WearOS 4
 
-![optidice1](https://github.com/A31Nesta/OptiDice/assets/92674974/6d18a32a-55c9-4013-8e79-e854b8e2ebf3)
+![screenshot1](https://github.com/user-attachments/assets/36b56ee2-e8a0-4eb7-a246-d4d0ed5ff6dc)
 ![optidiceCoin](https://github.com/A31Nesta/OptiDice/assets/92674974/b328bc8b-cdc1-4da8-8015-1d7efe627b00)
 
 
@@ -13,10 +13,10 @@ Tap the screen once to prevent the dice from moving when you move your wrist, th
 Pro Tip: Tapping can create a little acceleration that can be detected by the dice if they're already on the board, to prevent this you can tap the screen while the dice are in the air
 
 ## Add more dice!
-Double tapping the screen brings up a menu to add more dice. You can add from D4s to D100s, when you're done just press the ROLL! button.  
+Double tapping the screen brings up a menu to add more dice. You can add from D4s to D100s, when you're done just press the ROLL button.  
 You can also add coins!
 
-![optidice2](https://github.com/A31Nesta/OptiDice/assets/92674974/abf6d350-b563-4222-8452-b2c35c24210e)
+![roll dice](https://github.com/user-attachments/assets/b03cf198-f2ee-42bd-8db4-dfa61dc3103a)
 
 
 ---
@@ -30,7 +30,9 @@ The dice have 3 different materials (for now) that are selected randomly when yo
 
 ---
 # What is that name?
-I didn't know that the name OptiDice was already being used by a company that makes dice, I just thought "Hey I want to make dice optimized for watches" so from "Optimize" and "Dice" I ended up with OptiDice
+I just thought "Hey I want to make dice optimized for watches" so from "Optimize" and "Dice" I ended up with OptiDice
 
 ## Are the dice really optimized?
 Opening the app takes a little while and opening the menu for the first time freezes for a second but the rest of the time the app runs really smoothly. I tested with quite a lot of dice and it worked pretty well (on the Galaxy Watch 4 at least)
+
+Also I created a custom shader for the dice that should improve performance (and graphics), no actual lights or physically based rendering is being done, it's simply Gouraud shading without specular reflections on the vertex shader and an extra "light" being multiplied in the fragment shader when the object is below a certain Y coordinate.
