@@ -61,9 +61,9 @@ func _ready():
 		reloadMaterials()
 	
 	# We add the possible materials to the array
-	diceMaterials.push_back(preload("res://Dice/Materials/Rad.tres"))
-	diceMaterials.push_back(preload("res://Dice/Materials/Mag.tres"))
-	diceMaterials.push_back(preload("res://Dice/Materials/Col.tres"))
+	diceMaterials.push_back(preload("res://Shaders/shader_rad.tres"))
+	diceMaterials.push_back(preload("res://Shaders/shader_mag.tres"))
+	diceMaterials.push_back(preload("res://Shaders/shader_col.tres"))
 	
 	# Put a d6 by default
 	addDice(d6, 1)

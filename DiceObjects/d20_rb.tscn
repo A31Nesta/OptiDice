@@ -1,16 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://vfuin508ias1"]
+[gd_scene load_steps=7 format=3 uid="uid://vfuin508ias1"]
 
 [ext_resource type="Script" path="res://scn/DieController.gd" id="1_ihcki"]
-[ext_resource type="Texture2D" uid="uid://cy1vi6tlg6vk7" path="res://Dice/D20/D20-L-Rad.png" id="2_w6u8a"]
+[ext_resource type="Material" uid="uid://em1uf3y3prda" path="res://Shaders/shader_rad.tres" id="2_ve7v5"]
 [ext_resource type="ArrayMesh" uid="uid://cucfambeg4yc6" path="res://Dice/D20/D20.obj" id="3_3m8y7"]
-[ext_resource type="Material" uid="uid://djt75ywjw4ipc" path="res://Dice/nums.tres" id="4_6bofr"]
+[ext_resource type="Material" uid="uid://dq2frxlmu7718" path="res://Shaders/shader_nums.tres" id="4_xvk5n"]
 [ext_resource type="ArrayMesh" uid="uid://b8vijk161tyq1" path="res://Dice/D20/D20n.obj" id="5_y03pk"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yt2an"]
-shading_mode = 2
-diffuse_mode = 1
-specular_mode = 2
-albedo_texture = ExtResource("2_w6u8a")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_eyykk"]
 points = PackedVector3Array(0.788367, 1.27598, 0, 1.27598, 0, -0.788617, 0, 0.788367, -1.27598, -0.788617, 1.27598, 0, 0, 0.788367, 1.27598, 1.27598, 0, 0.788367, 0.788367, -1.27598, 0, 0, -0.788617, -1.27598, -1.27598, 0, -0.788617, -1.27598, 0, 0.788367, 0, -0.788617, 1.27598, -0.788617, -1.27598, 0)
@@ -24,11 +18,11 @@ normals = [Vector3(0.688, -0.688, -0.688), Vector3(0, 1.114, 0.425), Vector3(-0.
 values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 
 [node name="Mdl" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_yt2an")
+material_override = ExtResource("2_ve7v5")
 mesh = ExtResource("3_3m8y7")
 
 [node name="D20n" type="MeshInstance3D" parent="Mdl"]
-material_override = ExtResource("4_6bofr")
+material_override = ExtResource("4_xvk5n")
 mesh = ExtResource("5_y03pk")
 skeleton = NodePath("../..")
 

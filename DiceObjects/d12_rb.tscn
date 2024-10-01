@@ -1,16 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dasq4pg8dxfjc"]
+[gd_scene load_steps=7 format=3 uid="uid://dasq4pg8dxfjc"]
 
 [ext_resource type="Script" path="res://scn/DieController.gd" id="1_hml6g"]
-[ext_resource type="Texture2D" uid="uid://cctttor61vork" path="res://Dice/D12/D12-L-Rad.png" id="2_5rmv3"]
+[ext_resource type="Material" uid="uid://em1uf3y3prda" path="res://Shaders/shader_rad.tres" id="2_sx6wg"]
 [ext_resource type="ArrayMesh" uid="uid://beq5ks848ey6k" path="res://Dice/D12/D12.obj" id="3_b43g7"]
-[ext_resource type="Material" uid="uid://djt75ywjw4ipc" path="res://Dice/nums.tres" id="4_7nojb"]
+[ext_resource type="Material" uid="uid://dq2frxlmu7718" path="res://Shaders/shader_nums.tres" id="4_mw5ay"]
 [ext_resource type="ArrayMesh" uid="uid://bymdoayxfxw45" path="res://Dice/D12/D12n.obj" id="5_1wjpa"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uvxnf"]
-shading_mode = 2
-diffuse_mode = 1
-specular_mode = 2
-albedo_texture = ExtResource("2_5rmv3")
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ccjte"]
 points = PackedVector3Array(0, 1.40126, 0.53521, 0.53521, 0, 1.40126, 0.865773, 0.865773, 0.865773, 1.40126, 0.53521, 0, 0, 1.40126, -0.535485, -1.40126, 0.53521, 0, -0.866048, 0.865773, 0.865773, -0.535485, 0, 1.40126, 0, -1.40126, 0.53521, 0.865773, -0.866048, 0.865773, 1.40126, -0.535485, 0, 0.53521, 0, -1.40126, 0.865773, 0.865773, -0.866048, -0.535485, 0, -1.40126, -0.866048, 0.865773, -0.866048, -1.40126, -0.535485, 0, -0.866048, -0.866048, 0.865773, 0, -1.40126, -0.535485, 0.865773, -0.866048, -0.866048, -0.866048, -0.866048, -0.866048)
@@ -24,11 +18,11 @@ normals = [Vector3(0.627, 1.014, 0), Vector3(-1.014, 0, -0.627), Vector3(0.627, 
 values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
 
 [node name="Mdl" type="MeshInstance3D" parent="."]
-material_override = SubResource("StandardMaterial3D_uvxnf")
+material_override = ExtResource("2_sx6wg")
 mesh = ExtResource("3_b43g7")
 
 [node name="D12n" type="MeshInstance3D" parent="Mdl"]
-material_override = ExtResource("4_7nojb")
+material_override = ExtResource("4_mw5ay")
 mesh = ExtResource("5_1wjpa")
 skeleton = NodePath("../..")
 

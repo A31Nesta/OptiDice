@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cf0fkpk2dqbyi"]
+
+[ext_resource type="Shader" path="res://Shaders/diceShader.gdshader" id="1_yinfh"]
+[ext_resource type="Texture2D" uid="uid://vdmt2prdjo36" path="res://Dice/Materials/Col.png" id="2_epqhh"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_yinfh")
+shader_parameter/albedoTex = ExtResource("2_epqhh")
