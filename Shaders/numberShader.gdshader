@@ -36,7 +36,7 @@ void fragment() {
 	// Bottom light color
 	vec3 bottomLight = vec3(0.788,0.717,0.588);
 	// Overlay light
-	vec3 light = vec3(1.0+lightMult) * mix(vec3(1.0), bottomLight, lightMult);
+	vec3 light = mix(vec3(1.0), bottomLight, lightMult);
 	
 
 	ALBEDO = texture(albedoTex, UV).rgb * COLOR.rgb * light;

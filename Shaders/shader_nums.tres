@@ -1,9 +1,9 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dq2frxlmu7718"]
 
-[ext_resource type="Shader" path="res://Shaders/diceShader.gdshader" id="1_04rpv"]
+[ext_resource type="Shader" path="res://Shaders/numberShader.gdshader" id="1_ko02r"]
 [ext_resource type="Texture2D" uid="uid://bwotc30gw6olf" path="res://Dice/Numbers.png" id="2_r7ust"]
 
 [resource]
 render_priority = 0
-shader = ExtResource("1_04rpv")
+shader = ExtResource("1_ko02r")
 shader_parameter/albedoTex = ExtResource("2_r7ust")
