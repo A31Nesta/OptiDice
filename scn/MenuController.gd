@@ -96,6 +96,7 @@ func _on_roll_button_pressed():
 	diceScene.addDice(diceScene.d10, d10c, size)
 	diceScene.addDice(diceScene.d12, d12c, size)
 	diceScene.addDice(diceScene.d20, d20c, size)
+	diceScene.addDice(diceScene.d100, d100c, size)
 	diceScene.addDice(diceScene.coin, coin, size)
 	
 	# We tell the main scene that the menu is already closed
