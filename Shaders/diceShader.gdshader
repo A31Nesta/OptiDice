@@ -7,7 +7,7 @@ uniform sampler2D albedoTex;
 void vertex() {
 	float ambient = 0.2f;
 	float diff = max(dot(MODEL_NORMAL_MATRIX*NORMAL, vec3(0.0, 1.0, 0.0)),0.0f);
-	
+
 	float lightIntensity = max(ambient + diff, 0.0f);
 	COLOR = vec4(lightIntensity, lightIntensity, lightIntensity, 1.0f);
 }
@@ -32,12 +32,12 @@ void fragment() {
 		lightMult = HEIGHT_THRESHOLD - pos.y;
 		lightMult = clamp(lightMult, 0.0, 1.0);
 	}
-	
+
 	// Bottom light color
 	vec3 bottomLight = vec3(0.788,0.717,0.588);
 	// Overlay light
 	vec3 light = vec3(1.0+lightMult) * mix(vec3(1.0), bottomLight, lightMult);
-	
+
 
 	ALBEDO = texture(albedoTex, UV).rgb * COLOR.rgb * light;
 }

@@ -46,7 +46,7 @@ func _ready():
 	var cfgfile := ConfigFile.new()
 	var err = cfgfile.load("user://config.cfg")
 
-	floor = $Board
+	floor = $Scene/Board
 
 	if err == OK:
 		var c = cfgfile.get_value("texture", "board", "none")
@@ -97,8 +97,9 @@ func _process(delta):
 	# Check one die per frame to calculate less things
 	if physicsRunning:
 		if diceOnScreen.size() > 0:
-			if diceOnScreen[dieChecking].transform.origin.y <= -1:
+			if diceOnScreen[dieChecking].transform.origin.y <= -10:
 				diceOnScreen[dieChecking].transform.origin = Vector3(3, 28, 3)
+				diceOnScreen[dieChecking].linear_velocity = Vector3(0, 0, 0)
 		
 			dieChecking += 1
 			if dieChecking == diceOnScreen.size():
