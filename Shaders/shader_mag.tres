@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://bqxsjonp3eu5a"]
 
-[ext_resource type="Shader" path="res://Shaders/diceShader.gdshader" id="1_171n8"]
+[ext_resource type="Shader" uid="uid://lrj1yor86q53" path="res://Shaders/diceShader.gdshader" id="1_171n8"]
 [ext_resource type="Texture2D" uid="uid://byyajus4htpu1" path="res://Dice/Materials/Mag.png" id="2_5xdin"]
 
 [resource]

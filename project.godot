@@ -12,13 +12,20 @@ config_version=5
 
 config/name="OptiDice"
 run/main_scene="res://scn/Dice2.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
 window/size/viewport_width=450
 window/size/viewport_height=450
+
+[input_devices]
+
+sensors/enable_accelerometer=true
+sensors/enable_gravity=true
+sensors/enable_gyroscope=true
+sensors/enable_magnetometer=true
 
 [physics]
 

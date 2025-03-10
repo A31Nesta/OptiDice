@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://bs0hh8vfwu0ba"]
 
-[ext_resource type="Script" path="res://scn/DiceManager.gd" id="1_wjiea"]
+[ext_resource type="Script" uid="uid://bapqf3mxu71ur" path="res://scn/DiceManager.gd" id="1_wjiea"]
 [ext_resource type="ArrayMesh" uid="uid://cxk4k351vsah3" path="res://Dice/board/board.obj" id="2_i38nt"]
-[ext_resource type="Script" path="res://scn/sceneController.gd" id="2_iwbe6"]
+[ext_resource type="Script" uid="uid://vg3fl3t1krxu" path="res://scn/sceneController.gd" id="2_iwbe6"]
 [ext_resource type="Texture2D" uid="uid://cu0h3lswnsym2" path="res://textures/BlackBoard.png" id="2_tm0v7"]
 [ext_resource type="ArrayMesh" uid="uid://cifjvu7ewr35p" path="res://Dice/board/col.obj" id="3_x6w1a"]
 [ext_resource type="PackedScene" uid="uid://k47trxjibpxk" path="res://camera_3d.tscn" id="4_3ue2a"]
-[ext_resource type="Script" path="res://scn/diceContainerController.gd" id="7_dwbys"]
+[ext_resource type="Script" uid="uid://b41uscdu1pasp" path="res://scn/diceContainerController.gd" id="7_dwbys"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rxduo"]
 shading_mode = 0

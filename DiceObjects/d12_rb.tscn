@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://dasq4pg8dxfjc"]
 
-[ext_resource type="Script" path="res://scn/DieController.gd" id="1_hml6g"]
+[ext_resource type="Script" uid="uid://bt64bip0v7wxj" path="res://scn/DieController.gd" id="1_hml6g"]
 [ext_resource type="Material" uid="uid://em1uf3y3prda" path="res://Shaders/shader_rad.tres" id="2_sx6wg"]
 [ext_resource type="ArrayMesh" uid="uid://beq5ks848ey6k" path="res://Dice/D12/D12.obj" id="3_b43g7"]
 [ext_resource type="Material" uid="uid://dq2frxlmu7718" path="res://Shaders/shader_nums.tres" id="4_mw5ay"]

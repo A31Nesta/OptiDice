@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cf0fkpk2dqbyi"]
 
-[ext_resource type="Shader" path="res://Shaders/diceShader.gdshader" id="1_yinfh"]
+[ext_resource type="Shader" uid="uid://lrj1yor86q53" path="res://Shaders/diceShader.gdshader" id="1_yinfh"]
 [ext_resource type="Texture2D" uid="uid://vdmt2prdjo36" path="res://Dice/Materials/Col.png" id="2_epqhh"]
 
 [resource]

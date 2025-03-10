@@ -1,6 +1,6 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://cn8hj6p2l0sx2"]
 
-[ext_resource type="Shader" path="res://Shaders/diceShader.gdshader" id="1_ws4ym"]
+[ext_resource type="Shader" uid="uid://lrj1yor86q53" path="res://Shaders/diceShader.gdshader" id="1_ws4ym"]
 [ext_resource type="Texture2D" uid="uid://c2o6shgiknj3x" path="res://Dice/coin/coinBothSides.png" id="2_mguv8"]
 
 [resource]

@@ -23,6 +23,12 @@ func rotate_by_gyro(p_gyro: Vector3, p_basis: Basis, p_delta: float) -> Basis:
 	rotate = rotate.rotated(p_basis.x, p_gyro.x * p_delta)
 	rotate = rotate.rotated(p_basis.y, p_gyro.y * p_delta)
 	rotate = rotate.rotated(p_basis.z, p_gyro.z * p_delta)
+	
+	var label = get_node("../CenterContainer/Label")
+	label.visible = true
+	label.modulate.a = 1
+	label.text = str(p_gyro);
+	
 	return rotate * p_basis
 ## Returns the basis corrected for drift by our gravity vector.
 func drift_correction(p_basis: Basis, p_grav: Vector3) -> Basis:
@@ -34,6 +40,8 @@ func drift_correction(p_basis: Basis, p_grav: Vector3) -> Basis:
 	if dot < 1.0:
 		# The cross between our two vectors gives us a vector perpendicular to our two vectors.
 		var axis := p_basis.y.cross(real_up).normalized()
+		if axis == Vector3(0, 0, 0):
+			return p_basis
 		var correction := Basis(axis, acos(dot))
 		p_basis = correction * p_basis
 	return p_basis

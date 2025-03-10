@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://c24wlwrq0dsdl"]
 
-[ext_resource type="Script" path="res://scn/DieController.gd" id="1_35evc"]
+[ext_resource type="Script" uid="uid://bt64bip0v7wxj" path="res://scn/DieController.gd" id="1_35evc"]
 [ext_resource type="Material" uid="uid://cn8hj6p2l0sx2" path="res://Shaders/shader_coin.tres" id="2_xr4cv"]
 [ext_resource type="ArrayMesh" uid="uid://bcwjylnvoqfwp" path="res://Dice/coin/coin.obj" id="3_7s6l3"]
 
@@ -8,7 +8,6 @@
 points = PackedVector3Array(0, -0.05, -1, -0.5, -0.05, -0.866092, 0, 0.05, -1, 0.5, -0.05, -0.866092, -0.5, 0.05, -0.866092, -0.866092, -0.05, -0.5, 0.5, 0.05, -0.866092, 0.865897, -0.05, -0.5, -0.866092, 0.05, -0.5, -1, -0.05, 0, 0.865897, 0.05, -0.5, 1, -0.05, 0, -1, 0.05, 0, -0.866092, -0.05, 0.5, 1, 0.05, 0, 0.865897, -0.05, 0.5, -0.866092, 0.05, 0.5, -0.5, -0.05, 0.865897, 0.865897, 0.05, 0.5, 0.5, -0.05, 0.865897, -0.5, 0.05, 0.865897, 0, -0.05, 1, 0.5, 0.05, 0.865897, 0, 0.05, 1)
 
 [node name="C-RB" type="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 gravity_scale = 4.0
 continuous_cd = true
 script = ExtResource("1_35evc")
